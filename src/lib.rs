@@ -1,5 +1,5 @@
-mod errors;
-mod messages;
-mod worker_communication;
+pub mod errors;
+pub mod messages;
+pub mod worker_communication;
 
 
