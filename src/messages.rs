@@ -40,6 +40,7 @@ pub struct JobRequest {
 pub struct ExternalQueueJobResponse {
     pub job_id: String,
     pub worker_id: String
+    pub request_id: String
 }
 
 #[derive(Deserialize,Debug,Serialize,Clone)]
