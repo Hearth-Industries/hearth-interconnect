@@ -36,12 +36,17 @@ pub struct Analytics {
 }
 
 #[derive(Deserialize,Debug,Serialize,Clone)]
+pub struct PingPongResponse {
+    worker_id: String
+}
+
+#[derive(Deserialize,Debug,Serialize,Clone)]
 #[serde(tag = "type")]
 pub enum Message {
     InternalWorkerAnalytics(Analytics),
     InternalWorkerQueueJob(Job),
     InternalPingPongRequest,
-    InternalPongResponse,
+    InternalPongResponse(PingPongResponse),
     // External
     ExternalQueueJob(JobRequest),
     ExternalQueueJobResponse(ExternalQueueJobResponse),
