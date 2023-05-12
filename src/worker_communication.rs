@@ -16,7 +16,8 @@ pub enum DWCActionType {
     PausePlayback,
     ResumePlayback,
     GetTrackCompleteTimestamp,
-    QueueTracks
+    QueueTracks,
+    GetMetaData
 }
 
 #[derive(Deserialize,Debug,Serialize,Clone)]
