@@ -37,7 +37,7 @@ pub struct Analytics {
 
 #[derive(Deserialize,Debug,Serialize,Clone)]
 pub struct PingPongResponse {
-    worker_id: String
+    pub worker_id: String
 }
 
 #[derive(Deserialize,Debug,Serialize,Clone)]
