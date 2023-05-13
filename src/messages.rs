@@ -41,6 +41,15 @@ pub struct PingPongResponse {
 }
 
 #[derive(Deserialize,Debug,Serialize,Clone)]
+pub struct MetadataResult {
+    duration_milliseconds: u64,
+    file_type: String,
+    artist: String,
+    name: String,
+    sample_rate: u64,
+}
+
+#[derive(Deserialize,Debug,Serialize,Clone)]
 #[serde(tag = "type")]
 pub enum Message {
     InternalWorkerAnalytics(Analytics),
@@ -50,6 +59,7 @@ pub enum Message {
     // External
     ExternalQueueJob(JobRequest),
     ExternalQueueJobResponse(ExternalQueueJobResponse),
+    ExternalMetadataResult(MetadataResult),
     // Other
     DirectWorkerCommunication(DirectWorkerCommunication),
     ErrorReport(ErrorReport)
