@@ -41,12 +41,10 @@ pub struct PingPongResponse {
 }
 
 #[derive(Deserialize,Debug,Serialize,Clone)]
-pub struct MetadataResult {
-    pub duration_milliseconds: u64,
-    pub file_type: String,
-    pub artist: String,
-    pub name: String,
-    pub sample_rate: u64,
+pub struct Metadata {
+    pub duration: Option<u64>, // Duration in seconds
+    pub position: Option<u64>,
+    pub sample_rate: Option<u32>
 }
 
 #[derive(Deserialize,Debug,Serialize,Clone)]
