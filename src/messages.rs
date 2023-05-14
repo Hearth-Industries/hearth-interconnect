@@ -57,7 +57,7 @@ pub enum Message {
     // External
     ExternalQueueJob(JobRequest),
     ExternalQueueJobResponse(ExternalQueueJobResponse),
-    ExternalMetadataResult(MetadataResult),
+    ExternalMetadataResult(Metadata),
     // Other
     DirectWorkerCommunication(DirectWorkerCommunication),
     ErrorReport(ErrorReport)
