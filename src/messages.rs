@@ -1,3 +1,4 @@
+use schemars::JsonSchema;
 use crate::errors::ErrorReport;
 use crate::worker_communication::{DirectWorkerCommunication, Job, JobEvent};
 use serde_derive::Deserialize;
@@ -20,7 +21,7 @@ pub struct JobRequest {
     pub request_id: String,
 }
 
-#[derive(Deserialize,Debug,Serialize,Clone)]
+#[derive(Deserialize,Debug,Serialize,Clone,JsonSchema)]
 pub struct ExternalQueueJobResponse {
     pub job_id: String,
     pub worker_id: String,
@@ -41,7 +42,7 @@ pub struct PingPongResponse {
     pub worker_id: String
 }
 
-#[derive(Deserialize,Debug,Serialize,Clone)]
+#[derive(Deserialize,Debug,Serialize,Clone,JsonSchema)]
 pub struct Metadata {
     pub duration: Option<u64>, // Duration in seconds
     pub position: Option<u64>,
