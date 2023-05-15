@@ -38,7 +38,8 @@ pub struct DirectWorkerCommunication {
     pub request_id: Option<String>,
     pub new_volume: Option<f32>,
     pub seek_position: Option<u64>,
-    pub loop_times: Option<usize>
+    pub loop_times: Option<usize>,
+    pub worker_id: String,
 }
 
 #[derive(Deserialize,Debug,Serialize,Clone)]
