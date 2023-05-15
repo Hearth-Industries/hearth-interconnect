@@ -23,7 +23,8 @@ pub struct JobRequest {
 #[derive(Deserialize,Debug,Serialize,Clone)]
 pub struct ExternalQueueJobResponse {
     pub job_id: String,
-    pub worker_id: String
+    pub worker_id: String,
+    pub guild_id: String
 }
 
 #[derive(Deserialize,Debug,Serialize,Clone)]
@@ -44,7 +45,9 @@ pub struct PingPongResponse {
 pub struct Metadata {
     pub duration: Option<u64>, // Duration in seconds
     pub position: Option<u64>,
-    pub sample_rate: Option<u32>
+    pub sample_rate: Option<u32>,
+    pub guild_id: String,
+    pub job_id: String
 }
 
 #[derive(Deserialize,Debug,Serialize,Clone)]
