@@ -17,7 +17,8 @@ pub enum DWCActionType {
     ResumePlayback,
     GetTrackCompleteTimestamp,
     QueueTracks,
-    GetMetaData
+    GetMetaData,
+    JoinChannel
 }
 
 #[derive(Deserialize,Debug,Serialize,Clone)]
@@ -28,11 +29,12 @@ pub struct Job {
     pub worker_id: String,
     pub request_id: String
 }
-
+//TODO: Cleanup this mess
 #[derive(Deserialize,Debug,Serialize,Clone)]
 pub struct DirectWorkerCommunication {
     pub job_id: String,
     pub guild_id: Option<String>,
+    pub voice_channel_id: Option<String>,
     pub play_audio_url: Option<String>,
     pub action_type: DWCActionType,
     pub request_id: Option<String>,
