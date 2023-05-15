@@ -16,8 +16,6 @@ pub struct PlayAudioAction {
 
 #[derive(Deserialize,Debug,Serialize,Clone)]
 pub struct JobRequest {
-    pub guild_id: String,
-    pub voice_channel_id: String,
     pub request_id: String,
 }
 
