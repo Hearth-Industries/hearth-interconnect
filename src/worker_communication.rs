@@ -23,8 +23,6 @@ pub enum DWCActionType {
 
 #[derive(Deserialize,Debug,Serialize,Clone)]
 pub struct Job {
-    pub guild_id: String,
-    pub voice_channel_id: String,
     pub job_id: String,
     pub worker_id: String,
     pub request_id: String
