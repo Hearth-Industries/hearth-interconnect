@@ -17,12 +17,14 @@ pub struct PlayAudioAction {
 #[derive(Deserialize,Debug,Serialize,Clone)]
 pub struct JobRequest {
     pub request_id: String,
+    pub guild_id: String
 }
 
 #[derive(Deserialize,Debug,Serialize,Clone,JsonSchema)]
 pub struct ExternalQueueJobResponse {
     pub job_id: String,
     pub worker_id: String,
+    pub guild_id: String
 }
 
 #[derive(Deserialize,Debug,Serialize,Clone)]

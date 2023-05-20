@@ -25,7 +25,8 @@ pub enum DWCActionType {
 pub struct Job {
     pub job_id: String,
     pub worker_id: String,
-    pub request_id: String
+    pub request_id: String,
+    pub guild_id: String
 }
 //TODO: Cleanup this mess
 #[derive(Deserialize,Debug,Serialize,Clone)]
