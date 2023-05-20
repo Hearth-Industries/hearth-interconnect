@@ -5,5 +5,6 @@ use serde_derive::Serialize;
 pub struct ErrorReport {
     pub error: String,
     pub request_id: String,
-    pub job_id: String
+    pub job_id: String,
+    pub guild_id: Option<String>
 }
