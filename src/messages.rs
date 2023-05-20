@@ -46,7 +46,8 @@ pub struct Metadata {
     pub duration: Option<u64>, // Duration in seconds
     pub position: Option<u64>,
     pub sample_rate: Option<u32>,
-    pub job_id: String
+    pub job_id: String,
+    pub guild_id: String
 }
 
 #[derive(Deserialize,Debug,Serialize,Clone)]
