@@ -51,6 +51,12 @@ pub struct Metadata {
 }
 
 #[derive(Deserialize,Debug,Serialize,Clone)]
+pub struct JobExpired {
+    pub guild_id: String,
+    pub job_id: String,
+}
+
+#[derive(Deserialize,Debug,Serialize,Clone)]
 #[serde(tag = "type")]
 pub enum Message {
     InternalWorkerAnalytics(Analytics),
@@ -61,6 +67,7 @@ pub enum Message {
     ExternalQueueJob(JobRequest),
     ExternalQueueJobResponse(ExternalQueueJobResponse),
     ExternalMetadataResult(Metadata),
+    ExternalJobExpired(JobExpired),
     // Other
     DirectWorkerCommunication(DirectWorkerCommunication),
     ErrorReport(ErrorReport)
