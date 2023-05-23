@@ -28,6 +28,7 @@ pub struct Job {
     pub request_id: String,
     pub guild_id: String
 }
+
 //TODO: Cleanup this mess
 #[derive(Deserialize,Debug,Serialize,Clone)]
 pub struct DirectWorkerCommunication {

@@ -57,6 +57,11 @@ pub struct JobExpired {
 }
 
 #[derive(Deserialize,Debug,Serialize,Clone)]
+pub struct ShutdownAlert {
+    pub worker_id: String
+}
+
+#[derive(Deserialize,Debug,Serialize,Clone)]
 #[serde(tag = "type")]
 pub enum Message {
     InternalWorkerAnalytics(Analytics),
@@ -70,5 +75,6 @@ pub enum Message {
     ExternalJobExpired(JobExpired),
     // Other
     DirectWorkerCommunication(DirectWorkerCommunication),
-    ErrorReport(ErrorReport)
+    ErrorReport(ErrorReport),
+    WorkerShutdownAlert(ShutdownAlert)
 }
