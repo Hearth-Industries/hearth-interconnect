@@ -58,7 +58,8 @@ pub struct JobExpired {
 
 #[derive(Deserialize,Debug,Serialize,Clone)]
 pub struct ShutdownAlert {
-    pub worker_id: String
+    pub worker_id: String,
+    pub affected_job_ids: Vec<String>
 }
 
 #[derive(Deserialize,Debug,Serialize,Clone)]
