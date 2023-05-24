@@ -33,7 +33,7 @@ pub struct Job {
 #[derive(Deserialize,Debug,Serialize,Clone)]
 pub struct DirectWorkerCommunication {
     pub job_id: String,
-    pub guild_id: Option<String>,
+    pub guild_id: String,
     pub voice_channel_id: Option<String>,
     pub play_audio_url: Option<String>,
     pub action_type: DWCActionType,
