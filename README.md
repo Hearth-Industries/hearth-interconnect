@@ -1,2 +1,2 @@
 # Hearth Interconnect
-Connects client and server Hearth libraries by providing shares type interface
+Connects client and server Hearth libraries by providing shared type interface between them.
